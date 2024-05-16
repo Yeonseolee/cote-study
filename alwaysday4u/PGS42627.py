@@ -14,10 +14,10 @@ def solution(jobs):
                 heapq.heappush(heap, [job[1], job[0]])
                 
         if heap:
-            work = heapq.heappop(heap) # 가장 짧은 작업 시작
+            work = heapq.heappop(heap) # 소요시간 짧은 작업 시작
             start = now
-            now += work[0]
-            total += now - work[1]
+            now += work[0]             # 작업 후 시간
+            total += now - work[1]     # 총 대기시간
             complete += 1
         else:
             now += 1    # 힙에 작업이 없는 경우 현재 시간 + 1
