@@ -3,6 +3,7 @@ n = int(input())
 graph = [-1] * n
 
 def check(x, y):
+
     # y열에 퀸이 있는지 확인
     if graph.count(y):
         return False
@@ -13,6 +14,7 @@ def check(x, y):
     return True
 
 answer = 0
+
 def backtracking(i): # i행에 놓을 퀸의 위치를 찾는다
     global answer
     if i == n:
